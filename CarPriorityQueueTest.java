@@ -4,8 +4,8 @@ public class CarPriorityQueueTest {
 
     public static void main(String[] args) {
         PriorityQueue < Car > carPQ = new PriorityQueue < > ();
-        //Change this value to increase number of cars.
-        Integer size = 10;
+        //Change the values below to increase or decrease the the range.
+        Integer size = getRandomNumber(5, 10);
         String makes[] = new String[] {
             "Ford",
             "Cevy",
@@ -43,16 +43,12 @@ public class CarPriorityQueueTest {
             Integer year = getRandomNumber(1995, 2022);
             String make = makes[getRandomNumber(1, 10)];
             String model = models[getRandomNumber(1, 10)];
-            String trim = trims[getRandomNumber (1, 4)];
+            String trim = trims[getRandomNumber(1, 4)];
             Car car = new Car(year, make, model, trim);
             carPQ.add(car);
         }
-
-        for (Integer i = 0; i < carPQ.size(); i++) {
-            String car = carPQ.remove().toString();
-            System.out.println(car);
-        }
         //USE A LOOP TO POLL THE ELEMENTS IN THE QUEUE AND PRINT THEM IN ASCENDING ORDER
+        System.out.println("Size of the priority queue is: " + size);
         while (!carPQ.isEmpty()) {
             Car c = carPQ.poll();
             System.out.println(c);

@@ -1,11 +1,3 @@
-/**
- * 
- */
-
-/**
- * @author Chander
- *
- */
 public class Car implements Comparable<Car> {
 	private int year;
 	private String make;
@@ -57,16 +49,7 @@ public class Car implements Comparable<Car> {
 		return new String("Car:\t\t" + this.year + "\t\t" + this.make + "\t\t" + this.model + "\t\t" + this.trim);
 	}
 
-	
-	/**
-	 * This method will compare 2 cars. If car1's year is lesser it will return -1, if equal it will return 0, 
-	 * and if greater it will return 1.
-	 * @return 	-1 if car1's year is < car2's year
-	 * 			0 if car1's year is == car2's year
-	 * 			1 if car1's year is > car2's year
-	 */
 	public int compareTo(Car c2) {
-	    //WRITE YOUR LOGIC HERE
        if (this.year < c2.getYear()) {
             return -1;
         } else if (this.year == c2.getYear()) {
