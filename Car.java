@@ -67,13 +67,13 @@ public class Car implements Comparable<Car> {
 	 */
 	public int compareTo(Car c2) {
 	    //WRITE YOUR LOGIC HERE
-       if (this.year < Car.getYear()) {
+       if (this.year < c2.getYear()) {
             return -1;
-        } else if (this.year == Car.getYear()) {
+        } else if (this.year == c2.getYear()) {
             return 0;
-        } else if (this.year > Car.getYear()) {
+        } else if (this.year > c2.getYear()) {
             return 1;
         }
+        return 0;
 	}
-	
 }
